@@ -1,5 +1,5 @@
 // Templates
-function accountLinkTemplate(account) {
+const accountLinkTemplate = (account) => {
   return `
     <li class="list-group-item">
       <a data-id="${account.id}" href="javascript:void(0);">
@@ -7,9 +7,9 @@ function accountLinkTemplate(account) {
       </a>
     </li>
   `;
-}
+};
 
-function accountDetailsTemplate(account, borrowCount = 0) {
+const accountDetailsTemplate = (account, borrowCount = 0) => {
   const fullName = `${account.name.first} ${account.name.last}`;
   return `
     <div class="card">
@@ -34,9 +34,9 @@ function accountDetailsTemplate(account, borrowCount = 0) {
       </div>
     </div>
   `;
-}
+};
 
-function getBooksPossessedByAccountTemplate(books) {
+const getBooksPossessedByAccountTemplate = (books) => {
   let lis = books
     .map(({ title, author }) => {
       const fullName = `${author.name.first} ${author.name.last}`;
@@ -61,18 +61,18 @@ function getBooksPossessedByAccountTemplate(books) {
       </ul>
     </div>
   `;
-}
+};
 
 // Render functions
-function renderAccounts() {
+const renderAccounts = () => {
   const list = document.querySelector("#accounts-list");
   const result = sortAccountsByLastName(accounts);
   const lis = result.map(accountLinkTemplate).join("");
 
   list.innerHTML = lis;
-}
+};
 
-function renderAccountSelection() {
+const renderAccountSelection = () => {
   const list = document.querySelector("#accounts-list");
   const lis = Array.from(list.children);
   lis.forEach((li) => {
@@ -88,11 +88,11 @@ function renderAccountSelection() {
       selection.innerHTML += getBooksPossessedByAccountTemplate(inPossession);
     });
   });
-}
+};
 
-function render() {
+const render = () => {
   renderAccounts();
   renderAccountSelection();
-}
+};
 
 document.addEventListener("DOMContentLoaded", render);

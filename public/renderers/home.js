@@ -1,28 +1,28 @@
-function renderTotalBooks() {
+const renderTotalBooks = () => {
   const count = getTotalBooksCount(books);
   if (typeof count !== "number") return;
 
   const span = document.querySelector("#total-book-count");
   span.innerHTML = count;
-}
+};
 
-function renderBooksBorrowed() {
+const renderBooksBorrowed = () => {
   const count = getBooksBorrowedCount(books);
   if (typeof count !== "number") return;
 
   const span = document.querySelector("#total-borrow-count");
   span.innerHTML = count;
-}
+};
 
-function renderTotalAccounts() {
+const renderTotalAccounts = () => {
   const count = getTotalAccountsCount(accounts);
   if (typeof count !== "number") return;
 
   const span = document.querySelector("#total-accounts-count");
   span.innerHTML = count;
-}
+};
 
-function renderGetMostCommonGenres() {
+const renderGetMostCommonGenres = () => {
   const result = getMostCommonGenres(books);
   if (typeof result !== "object") return;
 
@@ -34,9 +34,9 @@ function renderGetMostCommonGenres() {
 
   const ul = document.querySelector("#most-common-genres");
   ul.innerHTML = lis;
-}
+};
 
-function renderGetMostPopularBooks() {
+const renderGetMostPopularBooks = () => {
   const result = getMostPopularBooks(books);
   if (typeof result !== "object") return;
 
@@ -48,9 +48,9 @@ function renderGetMostPopularBooks() {
 
   const ul = document.querySelector("#most-popular-books");
   ul.innerHTML = lis;
-}
+};
 
-function renderGetMostPopularAuthors() {
+const renderGetMostPopularAuthors = () => {
   const result = getMostPopularAuthors(books, authors);
   if (typeof result !== "object") return;
 
@@ -62,15 +62,15 @@ function renderGetMostPopularAuthors() {
 
   const ul = document.querySelector("#most-popular-authors");
   ul.innerHTML = lis;
-}
+};
 
-function render() {
+const render = () => {
   renderTotalBooks();
   renderBooksBorrowed();
   renderTotalAccounts();
   renderGetMostCommonGenres();
   renderGetMostPopularBooks();
   renderGetMostPopularAuthors();
-}
+};
 
 document.addEventListener("DOMContentLoaded", render);
