@@ -443,11 +443,11 @@ const accounts = [
     picture: "https://api.adorable.io/avatars/75/melisa.burks@netur.me",
     age: 34,
     name: {
-      first: "Melisa",
+      first: "Melissa",
       last: "Burks",
     },
     company: "NETUR",
-    email: "melisa.burks@netur.me",
+    email: "melissa.burks@netur.me",
     registered: "Saturday, May 27, 2017 4:54 PM",
   },
   {

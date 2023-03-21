@@ -28,7 +28,7 @@ const renderGetMostCommonGenres = () => {
 
   const lis = result
     .map((genre) => {
-      return `<li class="list-group-item">${genre.name} <span class="text-primary">(${genre.count})</span></li>`;
+      return `<li class="list-group-item">${genre.name} <span class="font-weight-bold">(${genre.count})</span></li>`;
     })
     .join("");
 
@@ -42,7 +42,7 @@ const renderGetMostPopularBooks = () => {
 
   const lis = result
     .map((book) => {
-      return `<li class="list-group-item">${book.name} <span class="text-primary">(${book.count} borrows)</span></li>`;
+      return `<li class="list-group-item">${book.name} <span class="font-weight-bold">(${book.count} borrows)</span></li>`;
     })
     .join("");
 
@@ -56,7 +56,7 @@ const renderGetMostPopularAuthors = () => {
 
   const lis = result
     .map((author) => {
-      return `<li class="list-group-item">${author.name} <span class="text-primary">(${author.count} borrows)</span></li>`;
+      return `<li class="list-group-item">${author.name} <span class="font-weight-bold">(${author.count} borrows)</span></li>`;
     })
     .join("");
 

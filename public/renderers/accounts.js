@@ -25,7 +25,7 @@ const accountDetailsTemplate = (account, borrowCount = 0) => {
             <p><strong>Email:</strong> ${account.email}</p>
             <p><strong>Account Created:</strong> ${account.registered}</p>
             <p class="mb-0">
-              Borrowed from the library <span class="text-primary font-weight-bold">
+              Borrowed from the library <span class="font-weight-bold">
                 ${borrowCount}
               </span> times.
             </p>
